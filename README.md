@@ -1,1 +1,1 @@
-# groovy
+Apache Groovy is a java syntax compatible object oriented programming language for java platform. It is both static and dynamic Programming languge and can also be used as scripting Language.Below file has groovy assignment.
