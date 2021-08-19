@@ -141,6 +141,15 @@ println "averge is: $avg"
 
 3. Reading a web page
 Using the Groovy JDK, access your home page and display the source code. Print the length of each line of the home page.
+ANS:
+String filepath = "C:\Users\URVI\Assignments\groovy\groovy_ass.txt"
+File myfile = new File(filepath)
+myFile.withReader {reader->
+    while((line=reader.readLine())!= null){
+        println"$line""
+        println line.length()
+    }
+}
 
 4. Closures as a filter
 Create a list of numbers. Print all elements greater than zero.
