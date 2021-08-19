@@ -195,6 +195,27 @@ println "original password: " +password2
 2. Sorting a list
 Create a class called Course, with a String attribute called name and an int attribute called days. Create a list of four course instances, where at least two have the same number of days. Sort the list by number of days. Then, sort the list by days, but when the days are equal, sort by name.
 ANS: 
+class course {
+    String name
+    int days
+    def getvalues(String n, int d)
+    {
+        def name = n
+        def days = d
+        def l = [name:n,days:d]
+        
+    }
+    static void main(args) {
+        course First=new course()
+        course Second=new course()
+        course Third=new course()
+        course Fourth=new course()
+        
+        def common = [First.getvalues('java', 30), Second.getvalues('python', 30), Third.getvalues('groovy', 20), Fourth.getvalues('unix', 35)]
+        def sort = common.sort{a, b -> b["days"] <=> a["days"] ?: a["name"] <=> b["name"]}
+        sort. each {println it}
+    }
+}
 
 3. Operator overloading
 i.Create a class called Money with a double amount and a String currency (like USD or EUR). Implement a plus method that checks that the currencies are the same and, if so, returns a new Money instance with the sum of the amounts and the correct currency. Write a similar minus method.
